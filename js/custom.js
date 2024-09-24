@@ -35,10 +35,48 @@ $('.chocolate_container').slick({
 
 /** google_map js **/
 
-function myMap() {
-    var mapProp = {
-        center: new google.maps.LatLng(40.712775, -74.005973),
-        zoom: 18,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-}
+
+
+
+var swiper = new Swiper(".shop-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      924: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+     1200: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const images = document.querySelectorAll('.image');
+  
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filterValue = this.getAttribute('data-filter');
+  
+        images.forEach(image => {
+          if (filterValue === 'all' || image.classList.contains(filterValue)) {
+            image.classList.remove('hide');
+          } else {
+            image.classList.add('hide');
+          }
+        });
+      });
+    });
+  });
+  

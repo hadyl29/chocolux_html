@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/chocolat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ <title></title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+<style>/* From Uiverse.io by mi-series */ 
+   /* From Uiverse.io by Praashoo7 */
+   /* From Uiverse.io by 3bdel3ziz-T */ 
+.container {
+  --transition: 350ms;
+  --folder-W: 90px;
+  --folder-H: 50px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  height: calc(var(--folder-H) * 1.7);
+  position: relative;
+  top: 30px;
+}
+
+.folder {
+  position: absolute;
+  top: -20px;
+  left: calc(50% - 60px);
+  animation: float 2.5s infinite ease-in-out;
+  transition: transform var(--transition) ease;
+}
+
+.folder:hover {
+  transform: scale(1.05);
+}
+
+.folder .front-side,
+.folder .back-side {
+  position: absolute;
+  transition: transform var(--transition);
+  transform-origin: bottom center;
+}
+
+.folder .back-side::before,
+.folder .back-side::after {
+  content: "";
+  display: block;
+  background-color: white;
+  opacity: 0.5;
+  z-index: 0;
+  width: var(--folder-W);
+  height: var(--folder-H);
+  position: absolute;
+  transform-origin: bottom center;
+  border-radius: 15px;
+  transition: transform 350ms;
+  z-index: 0;
+}
+
+.container:hover .back-side::before {
+  transform: rotateX(-5deg) skewX(5deg);
+}
+.container:hover .back-side::after {
+  transform: rotateX(-15deg) skewX(12deg);
+}
+
+.folder .front-side {
+  z-index: 1;
+}
+
+.container:hover .front-side {
+  transform: rotateX(-40deg) skewX(15deg);
+}
+
+.folder .tip {
+  background: linear-gradient(135deg, #ff9a56, #ff6f56);
+  width: 80px;
+  height: 20px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -10px;
+  z-index: 2;
+}
+
+.folder .cover {
+  background: linear-gradient(135deg, #ffe563, #ffc663);
+  width: var(--folder-W);
+  height: var(--folder-H);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.custom-file-upload {
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background var(--transition) ease;
+  display: inline-block;
+  width: 180px;
+  padding: 10px 35px;
+  position: relative;
+  right: -2px;
+}
+
+.custom-file-upload:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+ 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left:50px ;
+  width: 700px;
+align-items: center;
+position: relative;
+margin-top: 12px;
+left: 300px;
+  padding-top: 3em;
+  padding-left: 9.8em;
+  padding-right: 2.8em;
+  padding-bottom: 2.1em;
+  border: 2px dashed #DAA06D;
+  border-radius: 15px;
+  background-color: #EADDCA;
+  box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: .4s ease-in-out;
+}
+
+::placeholder {
+  color: #DAA06D;
+  text-align: center;
+}
+
+.form .heading {
+  padding-left: 0.8em;
+  color: #DAA06D;
+  background-color: transparent;
+  letter-spacing: .5em;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 3em;
+  text-shadow: inset -1px -1px 1px #DAA06D;
+}
+
+.form .input {
+  outline: none;
+  padding: 0.5em;
+  border: 1px solid #DAA06D;
+  color: #DAA06D;
+  width: 50em;
+  height: 2.5em;
+  border-radius: 10px;
+  background-color: #EADDCA;
+  text-align: center;
+}
+
+.form .btn {
+  align-self: center;
+  margin-top: 2em;
+  margin-right: -300px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #E5AA70;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  transition: .4s ease-in-out opacity,.1s ease-in-out active;
+  padding: 1em;
+  
+}
+
+.form .btn:hover {
+  opacity: 0.8;
+}
+
+.form .btn:active {
+  transform: translateX(0.1em) translateY(0.1em);
+  box-shadow: none;
+}
+
+</style>
+</head>
+<body>
+   <nav class="bond">
+       <div class=" nav-container">
+            <div class="logo" > <a class="navbar-brand" href="admin.html">
+              <img src="images/logo3.png" alt="" height="160px" width="190px">
+            </a></div>
+           <ul class="navlist">
+               <li class="onli"><a class="here" href="admin.html"><b>HOME</b></a></li>
+               <li class="onli"><a class="here" href="users.html">Utilisateurs</a></li>
+               <li class="onli"><a class="here" href="gestionProduit.html">Produits</a></li>
+               <li class="onli"><a class="here" href="addProduit.html" >Ajout Produit</a>
+           </ul>
+           <div class="nav-icons">
+               <div class="menu-btn">
+                 <a href="connectez-vous.html"> <span class="lnr lnr-user"></span></a>
+                 <span class="lnr lnr-heart"></span>
+                 <span class="lnr lnr-cart"></span>
+               </div>
+   
+           </div>
+       </div>
+   </nav> 
+   <form class="addForm">
+       <p class="heading">Ajouter Produit</p>
+       <input placeholder="Libellé" class="input" type="text">
+       <input placeholder="Prix" class="input" type="text">
+       <input placeholder="Description" class="input" type="text">
+       <input placeholder="Type" class="input" type="text">
+       <input placeholder="Gout" class="input" type="text">
+       <div class="container">
+         <div class="folder">
+           <div class="front-side">
+             <div class="tip"></div>
+             <div class="cover"></div>
+           </div>
+           <div class="back-side cover"></div>
+         </div>
+         <label class="custom-file-upload">
+           <input class="title" type="file" />
+           Choose a file
+         </label>
+       </div>
+       
+       <button class="btn">Ajouter</button>
+   </form>
+   
+
+
+</body>
+
+</html>

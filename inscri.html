@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/inscri.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!--slick slider stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- slick slider -->
+
+  <link rel="stylesheet" href="css/slick-theme.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="main_body_content">
+
+    <div class="hero_area">
+      <!-- header section strats -->
+      <nav class="bond">
+        <div class="container nav-container">
+             <div class="logo" > <a  href="index.html">
+               <img src="images/logo3.png" alt="" height="160px" width="190px">
+             </a></div>
+            <ul class="navlist">
+                <li class="onli"><a class="here" href="index.html" class="active"><b>Acceuil</b></a></li>
+                <li class="onli"><a class="here" href="chocolate.html">Chocolates</a></li>
+                <li class="onli"><a class="here" href="a propos.html">A Propos</a>
+                   <!-- <ul class="dropdown">
+                      <li><a href="teint.html">Teint</a></li>
+                      <li><a href="levre.html">Lévre</a></li>
+                      <li><a href="yeux.html">Yeux</a></li>
+                    </ul>
+                </li>--->
+                <li class="onli"><a  class="here" href="#Contact">Contacte</a></li>
+            </ul>
+            <div class="quote_btn-container">
+              <a href="connected.html" >
+                <i  class="fa fa-user" aria-hidden="true"> </i>
+              </a>  
+              <a href="">
+              <i class="fa fa-heart" aria-hidden="true"></i></a>
+              <a href="">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>
+            </div>
+    
+            </div>
+        </div>
+    </nav> 
+ 
+
+      <div class="form-container">
+        <form action="#" method="post" class="signup-form" id="signupform">
+          <pre>
+                        <h1 class="H2">Je Crée Mon Compte</h1>
+                
+                       
+                        <input type="text" placeholder="votre prénom*" id="prenom" >  <input type="text" placeholder="votre nom*" id="nom" >
+            
+                        <input type="email" placeholder="votre e-mail" id="email">  <input type="email" placeholder="Confirmer votre e-mail*" >
+                  
+                        <input type="pasword" placeholder="votre mot de passe*" id="password">  <input type="pasword" placeholder="Confirmer votre mot de passe" >
+            
+                        <input type="number" placeholder="Votre téléphone" id="telephone"> <label for="genre">Votre genre:<select id="genre" name="genre"><option value="homme">Homme</option><option value="femme">Femme</option></select> </label>
+                       
+                        <label>DATE DE NAISSANCE</label>
+            
+                        <input type="date" required id="dateNaissance">
+            
+                        <button type="submit" class="b1">Je Crée Mon Compte</button>
+                    </form></pre>
+      </div>
+
+      <footer>
+        <div class="container10">
+          <p>&copy; 2024 . created by hadil hasnaoui &hearts; .</p>
+        </div>
+      </footer>
+</body>
+
+</html>
+<script>
+  const loginForm = document.getElementById('signupform');
+
+  loginForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const nom = document.getElementById('nom').value;
+    const prenom = document.getElementById('prenom').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const genre = document.getElementById('genre').value;
+
+    //const genre = document.querySelector('input[name="genre"]:checked').value;
+    const telephone = document.getElementById('telephone').value;
+    const dateNaissance = document.getElementById('dateNaissance').value;
+
+    const response = await fetch('http://localhost:3000/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password, nom, prenom, genre, telephone, dateNaissance }),
+    });
+
+    if (response.ok) {
+      alert('inscription réussie');
+      console.log('inscription réussie');
+    } else {
+      alert('Échec de l\'inscription');
+    }
+  });
+</script>

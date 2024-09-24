@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  .fa{
+    margin-left: 30px;
+    margin-top:45px;
+
+   
+  }
+  .fa:hover{
+    color: #3c0201;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    color: #0c0c0c;
+    background-color: #ffffff;
+    font-family: 'dancing script',cursive;
+    font-family: 'league spartan',sans-serif;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar{
+    height: .5rem;
+    width: .5rem;
+  }
+  ::-webkit-scrollbar-track{
+    background: #fff;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: #3c0201;
+  }
+/*header section*/
+
+  nav{
+    background-color: #a97657;
+    color: #fff;
+    display: flex;
+    width:100%;
+    height:85px;
+  }
+  .logo{
+    height:"70px";
+    width: "100px";
+    
+  }
+  .logo img{
+     margin-top: 20px;
+     margin-left: -200px;
+  }
+  .nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:70px;
+    font-family: "SnellBT Regular", sans-serif;
+  }
+  nav .navlist{
+    display: flex;
+    
+    
+  }
+  nav .navlist .onli{
+  padding: 10px 30px;
+  color: #3c0201;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 20px;
+  
+  margin-top: 10px;
+  
+  }
+  nav .navlist .onli .here{
+      color: #fff;
+      padding: 1rem;
+      position: relative;
+      left: 50px;
+       top: 10px;
+     text-decoration: none;
+  
+  }
+  
+  .quote_btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+            
+            color: #fff;
+  
+  }
+  .fa{
+    margin-left: 10px;
+    margin-bottom: 100px;
+   
+  }
+  .fa:hover{
+    color: #3c0201;
+  }
+  .quote_btn-container a {
+    color: #fff;
+   margin-bottom: -20px;
+  padding-right: 30px;
+  font-size: 17px;
+  position: relative;
+  left:100px;
+  
+  
+   
+  }
+  
+  .fa{
+    margin-left: 10px;
+    margin-bottom: 50px;
+    color: #fff;
+  }
+  .fa:hover{
+    color: #3c0201;
+  }
+    
+  
+  .custom_nav-container .nav_search-btn {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: none;
+    color: #fff;
+  }
+  .form-inline {
+    margin-bottom: 25px;
+    margin-right: 10px;
+
+  }
+  .custom_nav-container {
+    z-index: 99999;
+  }
+  
+  .custom_nav-container .navbar-toggler {
+    outline: none;
+  }
+  
+  .custom_nav-container .navbar-toggler {
+    padding: 0;
+    width: 37px;
+    height: 42px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  .custom_nav-container .navbar-toggler span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #46200b;
+    border-radius: 5px;
+    margin: 7px 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative;
+    transition: all 0.3s;
+  }
+  
+  .custom_nav-container .navbar-toggler span::before, .custom_nav-container .navbar-toggler span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #46200b;
+    border-radius: 5px;
+    top: -10px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  .custom_nav-container .navbar-toggler span::after {
+    top: 10px;
+  }
+ 
+  .signup-form  .H2{
+    font-size: 36px;
+  text-align: center;
+  color: #3c0201;
+  font-family: 'dancing script',cursive;
+ 
+
+      }
+      .signup-form {
+        margin-left: 150px;
+      }
+  .form-container {
+  display: flex;
+justify-content: space-between;
+background-color: #f1f1f1;
+background-image: url(../images/7.jpg);
+background-repeat: no-repeat;
+background-size:81%;
+background-position: left;
+align-items: center;
+color: #3c0201;
+min-height: 100vh;
+
+}
+.signup-form input{
+  height:40px;
+  width: 40%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid #8a370a ;
+  border-radius: 30px;
+  color: #3c0201;
+  text-transform:lowercase;
+  padding-left: 20px;
+  position: relative;
+  right: 150px;
+}
+input::placeholder {
+  color: #3c0201;
+}
+
+.checkbox{
+ padding: 0px;
+  width: 30px;
+margin: 0;
+color: #3c0201;
+
+}
+input .checkbox1{
+  width:30px;
+  padding: 0px;
+margin: 0;
+position: relative;
+
+
+}
+label{
+position: relative;
+right: 140px;
+color: #3c0201;
+}
+.checkbox{
+position: relative;
+left: 100px;
+}
+.remember-forget {
+ 
+  font-size: 14.5px;
+  position: relative;
+  left: 100px;
+}
+.remember-forget input{
+width: 10px;
+height: 10px;
+position: absolute;
+top: 29px;
+}
+.remember-forget .checkbox1{
+width: 10px;
+height: 10px;
+position: absolute;
+bottom: 5px;
+}
+.remember-forget label{
+position: relative;
+left: 10px;
+bottom: 5px;
+}
+
+.b1{
+    position: relative;
+    bottom: 20px;
+        margin-left: 200px;
+        width: 230px;
+  height: 45px;
+  background: #f1f1f1;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #3c0201;
+  font-weight: 600;
+      }
+
+  .signup-form{
+  width: 700px;
+  height: 600px;
+  background-color:transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: #3c0201;
+  font-family: 'league spartan',sans-serif;
+  border-radius:10px;
+  padding: 10px 30px;
+  position: relative;
+  left: 400px;
+}
+footer{
+background-color: black;
+color: white;
+text-align: center;
+padding: 20px 0;
+}
+.container10{
+text-align: center;
+width: 100%;
+}
+    

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shop.css">
+    <title>Ganche shop</title>
+    <script src="js/shop.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body>
+  
+    <div class="header">
+        <h1>
+          Your cart
+        </h1>
+        <p>
+          "I say let the world go to hell, but I should always have my Chocolate."
+        </p>
+        <p>
+          ― Fyodor Dostoyevsky, Notes from Underground
+        </p>
+      </div>
+      <div class="cart-container">
+        <div class="empty" style="display:none">
+          No more twinkies ! 
+        </div>
+        <ul class="cart">
+          <li class="product" data-price="4.9" data-quantity="2">
+            <div class="product-preview">
+              <div class="thumbnail">
+                <img class="image" src="images/ganche1.jpg" />
+              </div>
+              <div class="product-paper">
+                <div class="product-name">
+                    Ganache à la Rose
+                </div>
+                <div class="product-price">
+                  DT 4.90
+                </div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              x2
+            </div>
+            <div class="product-interactions">
+              <div class="button plus">
+                +
+              </div>
+              <div class="button minus">
+                -
+              </div>
+              <div class="button del"></div>
+            </div>
+          </li>
+          <li class="product" data-price="3.5" data-quantity="1">
+            <div class="product-preview">
+              <div class="thumbnail">
+                <img class="image" src="images/gancheamonde.jpg" />
+              </div>
+              <div class="product-paper">
+                <div class="product-name">
+                    Praline d'Amandes
+                </div>
+                <div class="product-price">
+                  DT 3.50
+                </div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              x1
+            </div>
+            <div class="product-interactions">
+              <div class="button plus">
+                +
+              </div>
+              <div class="button minus">
+                -
+              </div>
+              <div class="button del"></div>
+            </div>
+          </li>
+          <li class="product" data-price="5.7" data-quantity="3">
+            <div class="product-preview">
+              <div class="thumbnail">
+                <img class="image" src="images/ganchecaramel.jpg" />
+              </div>
+              <div class="product-paper">
+                <div class="product-name">
+                  Ganche Caramel
+                </div>
+                <div class="product-price">
+                  DT5.70
+                </div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              x3
+            </div>
+            <div class="product-interactions">
+              <div class="button plus">
+                +
+              </div>
+              <div class="button minus">
+                -
+              </div>
+              <div class="button del"></div>
+            </div>
+          </li>
+          <li class="product" data-price="6.9" data-quantity="1">
+            <div class="product-preview">
+              <div class="thumbnail">
+                <img class="image" src="images/ganchefraise.jpg" />
+              </div>
+              <div class="product-paper">
+                <div class="product-name">
+                 Ganche a la faraise
+                </div>
+                <div class="product-price">
+                  DT 6.90
+                </div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              x1
+            </div>
+            <div class="product-interactions">
+              <div class="button plus">
+                +
+              </div>
+              <div class="button minus">
+                -
+              </div>
+              <div class="button del"></div>
+            </div>
+          </li>
+          <li class="product" data-price="3.9" data-quantity="2">
+            <div class="product-preview">
+              <div class="thumbnail">
+                <img class="image" src="images/ganchejasmin.jpg" />
+              </div>
+              <div class="product-paper">
+                <div class="product-name">
+                  Ganche Jasmin
+                </div>
+                <div class="product-price">
+                  DT 3.90
+                </div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              x2
+            </div>
+            <div class="product-interactions">
+              <div class="button plus">
+                +
+              </div>
+              <div class="button minus">
+                -
+              </div>
+              <div class="button del"></div>
+            </div>
+          </li>
+          <li class="product" data-price="6.5" data-quantity="1">
+            <div class="product-preview">
+              <div class="thumbnail">
+                <img class="image" src="images/ganchemiel.jpg" />
+              </div>
+              <div class="product-paper">
+                <div class="product-name">
+                  Ganche au Miel
+                </div>
+                <div class="product-price">
+                  DT 6.50
+                </div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              x1
+            </div>
+            <div class="product-interactions">
+              <div class="button plus">
+                +
+              </div>
+              <div class="button minus">
+                -
+              </div>
+              <div class="button del"></div>
+            </div>
+          </li>
+          <li class="product" data-price="1.8" data-quantity="3">
+            <div class="product-preview">
+              <div class="thumbnail">
+                <img class="image" src="images/ganchenoix.jpg" />
+              </div>
+              <div class="product-paper">
+                <div class="product-name">
+                 Ganche au Noix
+                </div>
+                <div class="product-price">
+                   DT 1.80
+                </div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              x3
+            </div>
+            <div class="product-interactions">
+              <div class="button plus">
+                +
+              </div>
+              <div class="button minus">
+                -
+              </div>
+              <div class="button del"></div>
+            </div>
+          </li>
+          <li class="product" data-price="2.5" data-quantity="1">
+            <div class="product-preview">
+              <div class="thumbnail">
+                <img class="image" src="images/ganchepin.jpg" />
+              </div>
+              <div class="product-paper">
+                <div class="product-name">
+                 Ganche au Pin
+                </div>
+                <div class="product-price">
+                  DT 2.50
+                </div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              x1
+            </div>
+            <div class="product-interactions">
+              <div class="button plus">
+                +
+              </div>
+              <div class="button minus">
+                -
+              </div>
+              <div class="button del"></div>
+            </div>
+          </li>
+          <li class="product" data-price="2.5" data-quantity="1">
+            <div class="product-preview">
+              <div class="thumbnail">
+                <img class="image" src="images/bar.png" />
+              </div>
+              <div class="product-paper">
+                <div class="product-name">
+                  Ganche Noix de coco 
+                </div>
+                <div class="product-price">
+                  Dt 12.90
+                </div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              x1
+            </div>
+            <div class="product-interactions">
+              <div class="button plus">
+                +
+              </div>
+              <div class="button minus">
+                -
+              </div>
+              <div class="button del"></div>
+            </div>
+          </li>
+          <li class="product" data-price="9.9" data-quantity="1">
+            <div class="product-preview">
+              <div class="thumbnail">
+                <img class="image" src="images/gancheframboise.jpg" />
+              </div>
+              <div class="product-paper">
+                <div class="product-name">
+                  Ganche à la Framboise
+                </div>
+                <div class="product-price">
+                  DT 9.90
+                </div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              x1
+            </div>
+            <div class="product-interactions">
+              <div class="button plus">
+                +
+              </div>
+              <div class="button minus">
+                -
+              </div>
+              <div class="button del"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <table class="bill">
+        <tr class="subtotal">
+          <td class="label">
+            Subtotal :
+          </td>
+          <td class="value">
+            DT 71.90
+          </td>
+        </tr>
+        <tr class="salestax">
+          <td class="label">
+            Sales tax : 
+          </td>
+          <td class="value">
+            DT 3.60
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            Shipping :
+          </td>
+          <td class="value">
+            DT 5.00
+          </td>
+        </tr>
+        <tr class="total">
+          <td class="label">
+            Total :
+          </td>
+          <td class="value">
+            DT 80.50
+          </td>
+        </tr>
+      </table>
+      <div class="actions">
+        <div class="big-button go">
+          Get them !
+        </div>
+      </div>
+      <div class="actions">
+        <a href="chocolate.html">
+        <div class="big-button return" >
+          Return to shop
+        </div></a>
+      </div>
+       
+</body>
+</html>

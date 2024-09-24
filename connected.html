@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/connected.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- bootstrap core css  -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- slick slider stylesheet  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+
+  <!-- fonts style  -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="css/slick-theme.css" />
+
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!--<link href="css/style.css" rel="stylesheet" />-->
+
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+</head>
+<style>
+
+</style>
+
+<body>
+  <div class="main_body_content">
+
+    <div class="hero_area">
+      <!-- header section strats -->
+      <nav class="bond">
+        <div class="container nav-container">
+             <div class="logo" > <a  href="index.html">
+               <img src="images/logo3.png" alt="" height="160px" width="190px">
+             </a></div>
+            <ul class="navlist">
+                <li class="onli"><a class="here" href="charme.html" class="active"><b>Acceuil</b></a></li>
+                <li class="onli"><a class="here" href="chocolate.html">Chocolates</a></li>
+                <li class="onli"><a class="here" href="a propos.html">A Propos</a>
+                   <!-- <ul class="dropdown">
+                      <li><a href="teint.html">Teint</a></li>
+                      <li><a href="levre.html">Lévre</a></li>
+                      <li><a href="yeux.html">Yeux</a></li>
+                    </ul>
+                </li>--->
+                <li class="onli"><a  class="here" href="#Contact">Contacte</a></li>
+            </ul>
+            <div class="quote_btn-container">
+              <a href="connected.html" >
+                <i  class="fa fa-user" aria-hidden="true"> </i>
+              </a>  
+              <a href="">
+              <i class="fa fa-heart" aria-hidden="true"></i></a>
+              <a href="">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>
+            </div>
+    
+            </div>
+        </div>
+    </nav> 
+
+      <div class="login">
+        <form action="" class="form" id="loginForm">
+          <h1>Se Connecter</h1>
+
+
+
+          <div class="input-box">
+            <input type="text" placeholder="Adresse email" required id="email" />
+            <span class="lnr lnr-user"></span>
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Mot de passe" required id="password" />
+            <span class="lnr lnr-lock"></span>
+          </div>
+          <div class="remember-forget">
+            <label> <input type="checkbox">Se souvenir de moi </label>
+            <a href="">Oublier le mot de passe?</a>
+          </div>
+          <button type="submit" class="btn5">CONNECTER</button>
+          <div class="registrer">
+            <p>Vous n'avez pas de compte ?</p>
+            <a href="inscri.html"> Inscrivez-vous</a>
+          </div>
+        </form>
+
+
+      </div>
+
+
+
+      <footer>
+        <div class="container10">
+          <p>&copy; 2024 . created by hadil hasnaoui &hearts; .</p>
+        </div>
+      </footer>
+
+
+
+
+
+
+      <script>
+        const loginForm = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', async (event) => {
+          event.preventDefault();
+
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+
+          const response = await fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+          });
+
+          if (response.ok) {
+            if (email === 'admin@gmail.com' && password === 'admin') {
+              window.location.href = 'admin.html'; 
+            } else {
+              window.location.href = 'chocolate.html'; 
+              console.log('user connected');
+            }
+          } else {
+            alert('Échec de la connexion');
+          }
+        });
+      </script>
+
+</body>
+
+</html>
